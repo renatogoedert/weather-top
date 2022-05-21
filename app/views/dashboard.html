@@ -3,6 +3,29 @@
 
 #{menu id:"dashboard"/}
 
-<section class="ui segment">
-  #{mainpanel/}
+<section class="ui stacked segment form">
+  #{list items:stations, as:'station'}
+  <header class="ui header">
+    ${station.name}
+  </header>
+  <table class="ui fixed table">
+    <thead>
+    <tr>
+      <th>Code</th>
+      <th>Temp</th>
+      <th>Wind Speed</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    #{list items:station.readings, as:'reading'}
+    <tr>
+      <td> ${reading.code} </td>
+      <td> ${reading.temperature} </td>
+      <td> ${reading.windSpeed} </td>
+    <tr>
+      #{/list}
+    </tbody>
+  </table>
+  #{/list}
 </section>
