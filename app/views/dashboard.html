@@ -8,21 +8,47 @@
   <header class="ui header">
     ${station.name}
   </header>
+    #{list items:station.readings, as:'reading'}
+  #{if reading_isLast}
+  <div class="ui equal width padded grid">
+      <div class="black column">
+          <h1 class="ui grey inverted small header">${station.name}</h1>
+      </div>
+      <div class="black column">
+          <h1 class="ui grey inverted small header"> Weather</h1>
+          <p class="ui grey inverted tiny header">${reading.codeToWeather(reading.code)}</p>
+      </div>
+      <div class="black column">
+          <h1 class="ui grey inverted small header">Temp</h1>
+          <p class="ui grey inverted tiny header">${reading.temperature} C</p>
+          <p class="ui grey inverted tiny header">${reading.ceToFa(reading.temperature)} F</p>
+      </div>
+      <div class="black column">
+          <h1 class="ui grey inverted small header">Wind</h1>
+          <p class="ui grey inverted tiny header">${reading.windInBf(reading.windSpeed)} bft</p>
+      </div>
+      <div class="black column">
+          <h1 class="ui grey inverted small header">Pressure</h1>
+          <p class="ui grey inverted tiny header">${reading.pressure} hpa</p>
+      </div>
+  </div>
+  #{/if}
+
   <table class="ui fixed table">
     <thead>
     <tr>
       <th>Code</th>
       <th>Temp</th>
       <th>Wind Speed</th>
+      <th>Pressure</th>
     </tr>
     </thead>
     <tbody>
-
-    #{list items:station.readings, as:'reading'}
-    <tr>
+      <tr>
       <td> ${reading.code} </td>
       <td> ${reading.temperature} </td>
       <td> ${reading.windSpeed} </td>
+      <td> ${reading.pressure} </td>
     <tr>
       #{/list}
     </tbody>

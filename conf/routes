@@ -6,6 +6,8 @@
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
 GET     /about                                  About.index
+GET     /Calculator/codeToWeather/{reading}      Calculator.codeToWeather
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

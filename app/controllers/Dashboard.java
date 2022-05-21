@@ -13,4 +13,12 @@ public class Dashboard extends Controller
     List<Station> stations = Station.findAll();
     render ("dashboard.html",stations);
   }
+
+
+  public static void lastStation(List<Station> stations) {
+    for(Station station:stations){
+      //station.createNewest();
+    }
+  }
+
 }

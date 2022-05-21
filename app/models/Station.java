@@ -1,5 +1,6 @@
 package models;
 
+import controllers.Calculator;
 import play.db.jpa.Model;
 
 import javax.persistence.CascadeType;
@@ -13,14 +14,6 @@ public class Station extends Model {
 
     public String name;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @OneToMany(cascade = CascadeType.ALL)
     public List<Reading> readings = new ArrayList<Reading>();
 
@@ -28,4 +21,8 @@ public class Station extends Model {
         this.name = name;
     }
 
+   public Reading getLastReading(){
+      Reading last = readings.get(readings.size() - 1);
+      return last;
+   }
 }
