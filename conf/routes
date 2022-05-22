@@ -5,6 +5,9 @@
 # Home page
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
+GET     /dashboard/indexStation/{id}            Dashboard.indexStation
+POST    /dashboard/addstation                   Dashboard.addStation
+POST    /dashboard/{name}/addreading            Dashboard.addReading
 GET     /about                                  About.index
 
 

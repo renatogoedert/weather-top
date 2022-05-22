@@ -24,4 +24,9 @@ public class Station extends Model {
       Reading last = readings.get(readings.size() - 1);
       return last;
    }
+
+  public static Station findByName(String name)
+  {
+    return find("name", name).first();
+  }
 }

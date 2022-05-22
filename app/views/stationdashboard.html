@@ -1,0 +1,85 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"stationdashboard"/}
+
+<section class="ui stacked segment form">
+  <header class="ui header">
+    ${station.name}
+  </header>
+  #{list items:station.readings, as:'reading'}
+  #{if reading_isLast}
+  <div class="ui equal width padded grid">
+    <div class="black column">
+      <h1 class="ui grey inverted small header">${station.name}</h1>
+    </div>
+    <div class="black column">
+      <h1 class="ui grey inverted small header"> Weather</h1>
+      <p class="ui grey inverted tiny header">${reading.codeToWeather(reading.code)}</p>
+    </div>
+    <div class="black column">
+      <h1 class="ui grey inverted small header">Temp</h1>
+      <p class="ui grey inverted tiny header">${reading.temperature} C</p>
+      <p class="ui grey inverted tiny header">${reading.ceToFa(reading.temperature)} F</p>
+    </div>
+    <div class="black column">
+      <h1 class="ui grey inverted small header">Wind</h1>
+      <p class="ui grey inverted tiny header">${reading.windInBf(reading.windSpeed)} bft</p>
+      <p class="ui grey inverted tiny header">${reading.windDirectionString(reading.windSpeed)} bft</p>
+      <p class="ui grey inverted tiny header">${reading.windChill(reading.temperature, reading.windSpeed)} bft</p>
+    </div>
+    <div class="black column">
+      <h1 class="ui grey inverted small header">Pressure</h1>
+      <p class="ui grey inverted tiny header">${reading.pressure} hpa</p>
+    </div>
+  </div>
+  #{/if}
+  #{/list}
+  #{list items:station.readings, as:'reading'}
+  <table class="ui fixed table">
+    <thead>
+    <tr>
+      <th>Code</th>
+      <th>Temp</th>
+      <th>Wind Speed</th>
+      <th>Pressure</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td> ${reading.code} </td>
+      <td> ${reading.temperature} </td>
+      <td> ${reading.windSpeed} </td>
+      <td> ${reading.pressure} </td>
+    <tr>
+      #{/list}
+    </tbody>
+  </table>
+
+  <form class="ui stacked segment form" action="/dashboard/${station.name}/addreading" method="POST">
+    <h1 class="ui small header">Add Reading</h1>
+    <div class="five fields">
+      <div class="field">
+        <label>Code</label>
+        <input placeholder="Code" type="number" name="code">
+      </div>
+      <div class="field">
+        <label>Temperature</label>
+        <input placeholder="00.0 C" type="number" name="temperature">
+      </div>
+      <div class="field">
+        <label>Wind Speed</label>
+        <input placeholder="00.00 Km/h" type="number" name="windSpeed">
+      </div>
+      <div class="field">
+        <label>Pressure</label>
+        <input placeholder="000hPa" type="number" name="pressure">
+      </div>
+      <div class="field">
+        <label>Wind Direction</label>
+        <input placeholder="000deg" type="number" name="windDirection">
+      </div>
+    </div>
+    <button class="ui blue submit button">Add Reading</button>
+  </form>
+</section>
