@@ -1,6 +1,5 @@
 package models;
 
-import controllers.Calculator;
 import play.db.jpa.Model;
 
 import javax.persistence.CascadeType;

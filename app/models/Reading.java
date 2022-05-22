@@ -1,10 +1,8 @@
 package models;
 
-import controllers.Calculator;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
-import java.security.PublicKey;
 
 @Entity
 public class Reading extends Model{
