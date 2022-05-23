@@ -9,6 +9,11 @@ GET     /dashboard/indexStation/{id}            Dashboard.indexStation
 POST    /dashboard/addstation                   Dashboard.addStation
 POST    /dashboard/{name}/addreading            Dashboard.addReading
 GET     /about                                  About.index
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+POST   /register                                Accounts.register
+POST   /authenticate                            Accounts.authenticate
+GET    /logout                                  Accounts.logout
 
 
 # Ignore favicon requests

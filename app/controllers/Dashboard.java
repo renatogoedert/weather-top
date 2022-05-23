@@ -10,7 +10,8 @@ public class Dashboard extends Controller
 {
   public static void index() {
     Logger.info("Rendering Dashboard");
-    List<Station> stations = Station.findAll();
+    Member member = Accounts.getLoggedInMember();
+    List<Station> stations = member.stations;
     render ("dashboard.html",stations);
   }
 
@@ -20,9 +21,11 @@ public class Dashboard extends Controller
     render ("stationdashboard.html",station);
   }
 
-  public static void addStation(String name){
-    Station station = new Station(name);
-    station.save();
+  public static void addStation(String name, float latitude,float longitude){
+    Member member = Accounts.getLoggedInMember();
+    Station station = new Station(name,latitude,longitude);
+    member.stations.add(station);
+    member.save();
     Logger.info("Adding Station" + name);
     redirect("/dashboard");
   }
