@@ -33,4 +33,41 @@ public class Station extends Model {
   {
     return find("name", name).first();
   }
+
+  public float getMaxWindSpeed(List<Reading> readings){
+    float maxWindSpeed = 0;
+    for(Reading reading:readings){
+      if(reading.windSpeed>maxWindSpeed) {
+        maxWindSpeed = reading.windSpeed;
+      }
+    }
+    return maxWindSpeed;
+  }
+  public float getMinWindSpeed(List<Reading> readings){
+    float minWindSpeed = 10000;
+    for(Reading reading:readings){
+      if(reading.windSpeed<minWindSpeed) {
+        minWindSpeed = reading.windSpeed;
+      }
+    }
+    return minWindSpeed;
+  }
+  public float getMaxPressure(List<Reading> readings){
+    float MaxPressure = 0;
+    for(Reading reading:readings){
+      if(reading.pressure>MaxPressure) {
+        MaxPressure = reading.pressure;
+      }
+    }
+    return MaxPressure;
+  }
+  public float getMinPressure(List<Reading> readings){
+    float MinPressure = 10000;
+    for(Reading reading:readings){
+      if(reading.pressure<MinPressure) {
+        MinPressure = reading.pressure;
+      }
+    }
+    return MinPressure;
+  }
 }

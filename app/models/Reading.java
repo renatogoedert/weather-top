@@ -114,4 +114,5 @@ public class Reading extends Model{
     public static String windChill(float temperature, float windSpeed){
         return df.format((13.12+0.6215*temperature-11.37*(Math.pow(windSpeed,0.16))+0.3965*temperature*(Math.pow(windSpeed,0.16))));
     }
+
 }
