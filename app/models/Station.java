@@ -70,4 +70,66 @@ public class Station extends Model {
     }
     return MinPressure;
   }
+
+  public int temperatureTrend(){
+    if(readings.size() >=3) {
+      Reading r1 = readings.get(readings.size() - 1);
+      Reading r2 = readings.get(readings.size() - 2);
+      Reading r3 = readings.get(readings.size() - 3);
+
+      float t1 = r1.getTemperature();
+      float t2 = r2.getTemperature();
+      float t3 = r3.getTemperature();
+
+      if(t1<t2 && t2<t3){
+        return 1;
+      }
+      if(t1>t2 && t2>t3){
+        return 2;
+      }
+    }
+    return 0;
+  }
+
+  public int pressureTrend(){
+    if(readings.size() >=3) {
+      Reading r1 = readings.get(readings.size() - 1);
+      Reading r2 = readings.get(readings.size() - 2);
+      Reading r3 = readings.get(readings.size() - 3);
+
+      int p1 = r1.getPressure();
+      int p2 = r2.getPressure();
+      int p3 = r3.getPressure();
+
+      if(p1<p2 && p2<p3){
+        return 1;
+      }
+      if(p1>p2 && p2>p3){
+        return 2;
+      }
+    }
+    return 0;
+  }
+
+  public int windTrend(){
+    if(readings.size() >=3) {
+      Reading r1 = readings.get(readings.size() - 1);
+      Reading r2 = readings.get(readings.size() - 2);
+      Reading r3 = readings.get(readings.size() - 3);
+
+      float w1 = r1.getWindSpeed();
+      float w2 = r2.getWindSpeed();
+      float w3 = r3.getWindSpeed();
+
+      if(w1<w2 && w2<w3){
+        return 1;
+      }
+      if(w1>w2 && w2>w3){
+        return 2;
+      }
+    }
+    return 0;
+  }
+
+
 }

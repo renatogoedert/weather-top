@@ -1,8 +1,11 @@
 package controllers;
 
-import models.*;
+import models.Member;
+import models.Reading;
+import models.Station;
 import play.Logger;
 import play.mvc.Controller;
+import java.util.*;
 
 import java.util.List;
 
@@ -31,7 +34,8 @@ public class Dashboard extends Controller
   }
 
   public static void addReading(String name, int code, float temperature, float windSpeed, int pressure, float windDirection){
-    Reading reading = new Reading(code,temperature,windSpeed,pressure,windDirection);
+    Date date = new Date();
+    Reading reading = new Reading(code,temperature,windSpeed,pressure,windDirection,date);
     Station station = Station.findByName(name);
     station.readings.add(reading);
     station.save();

@@ -24,6 +24,16 @@
       <i class="temperature low icon"></i>
       <p class="ui grey inverted tiny header">${reading.temperature} C</p>
       <p class="ui grey inverted tiny header">${reading.ceToFa(reading.temperature)} F</p>
+      #{if station.temperatureTrend() == 2}
+      <p class="ui grey inverted tiny header">
+        <i class="arrow up icon"></i>
+      </p>
+      #{/if}
+      #{if station.temperatureTrend() == 1}
+      <p class="ui grey inverted tiny header">
+        <i class="arrow down icon"></i>
+      </p>
+      #{/if}
     </div>
     <div class="black column">
       <h1 class="ui grey inverted small header">Wind</h1>
@@ -33,6 +43,16 @@
       <p class="ui grey inverted tiny header">${reading.windChill(reading.temperature, reading.windSpeed)} bft</p>
       <p class="ui grey inverted tiny header">Max: ${station.getMaxWindSpeed(station.readings)}</p>
       <p class="ui grey inverted tiny header">Min: ${station.getMinWindSpeed(station.readings)}</p>
+      #{if station.pressureTrend() == 1}
+      <p class="ui grey inverted tiny header">
+        <i class="arrow up icon"></i>
+      </p>
+      #{/if}
+      #{if station.pressureTrend() == 2}
+      <p class="ui grey inverted tiny header">
+        <i class="arrow down icon"></i>
+      </p>
+      #{/if}
     </div>
     <div class="black column">
       <h1 class="ui grey inverted small header">Pressure</h1>
@@ -40,6 +60,16 @@
       <p class="ui grey inverted tiny header">${reading.pressure} hpa</p>
       <p class="ui grey inverted tiny header">Max: ${station.getMaxPressure(station.readings)}</p>
       <p class="ui grey inverted tiny header">Min: ${station.getMinPressure(station.readings)}</p>
+      #{if station.windTrend() == 1}
+      <p class="ui grey inverted tiny header">
+        <i class="arrow up icon"></i>
+      </p>
+      #{/if}
+      #{if station.windTrend() == 2}
+      <p class="ui grey inverted tiny header">
+        <i class="arrow down icon"></i>
+      </p>
+      #{/if}
     </div>
   </div>
   #{/if}
@@ -48,6 +78,7 @@
   <table class="ui fixed table">
     <thead>
     <tr>
+      <th>Date</th>
       <th>Code</th>
       <th>Temp</th>
       <th>Wind Speed</th>
@@ -56,6 +87,7 @@
     </thead>
     <tbody>
     <tr>
+      <td> ${reading.date} </td>
       <td> ${reading.code} </td>
       <td> ${reading.temperature} </td>
       <td> ${reading.windSpeed} </td>

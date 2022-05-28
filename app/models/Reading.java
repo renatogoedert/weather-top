@@ -1,10 +1,10 @@
 package models;
 
 import play.db.jpa.Model;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 import javax.persistence.Entity;
+import java.text.DecimalFormat;
+import java.util.Date;
 
 @Entity
 public class Reading extends Model{
@@ -14,6 +14,7 @@ public class Reading extends Model{
     public float windSpeed;
     public int pressure;
     public float windDirection;
+    public Date date;
 
     public Reading(int code, float temperature, float windSpeed, int pressure, float windDirection) {
         this.code = code;
@@ -21,6 +22,39 @@ public class Reading extends Model{
         this.windSpeed = windSpeed;
         this.pressure = pressure;
         this.windDirection = windDirection;
+    }
+
+    public Reading(int code, float temperature, float windSpeed, int pressure, float windDirection, Date date) {
+        this.code = code;
+        this.temperature = temperature;
+        this.windSpeed = windSpeed;
+        this.pressure = pressure;
+        this.windDirection = windDirection;
+        this.date = date;
+    }
+
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(float temperature) {
+        this.temperature = temperature;
+    }
+
+    public float getWindSpeed() {
+        return windSpeed;
+    }
+
+    public void setWindSpeed(float windSpeed) {
+        this.windSpeed = windSpeed;
+    }
+
+    public int getPressure() {
+        return pressure;
+    }
+
+    public void setPressure(int pressure) {
+        this.pressure = pressure;
     }
 
     public static String codeToWeather(int code) {
