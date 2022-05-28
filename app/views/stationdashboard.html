@@ -3,77 +3,9 @@
 
 #{menu id:"stationdashboard"/}
 
+#{lastestconditions station:station /}
+
 <section class="ui stacked segment form">
-  <header class="ui header">
-    ${station.name}
-  </header>
-  #{list items:station.readings, as:'reading'}
-  #{if reading_isLast}
-  <div class="ui equal width padded grid">
-    <div class="black column">
-      <h1 class="ui grey inverted small header">${station.name}</h1>
-      <i class="cloud sun icon"></i>
-    </div>
-    <div class="black column">
-      <h1 class="ui grey inverted small header"> Weather</h1>
-      <i class="map marker icon"></i>
-      <p class="ui grey inverted tiny header">${reading.codeToWeather(reading.code)}</p>
-    </div>
-    <div class="black column">
-      <h1 class="ui grey inverted small header">Temp</h1>
-      <i class="temperature low icon"></i>
-      <p class="ui grey inverted tiny header">${reading.temperature} C</p>
-      <p class="ui grey inverted tiny header">${reading.ceToFa(reading.temperature)} F</p>
-      #{if station.temperatureTrend() == 2}
-      <p class="ui grey inverted tiny header">
-        <i class="arrow up icon"></i>
-      </p>
-      #{/if}
-      #{if station.temperatureTrend() == 1}
-      <p class="ui grey inverted tiny header">
-        <i class="arrow down icon"></i>
-      </p>
-      #{/if}
-    </div>
-    <div class="black column">
-      <h1 class="ui grey inverted small header">Wind</h1>
-      <i class="wind icon"></i>
-      <p class="ui grey inverted tiny header">${reading.windInBf(reading.windSpeed)} bft</p>
-      <p class="ui grey inverted tiny header">${reading.windDirectionString(reading.windSpeed)} bft</p>
-      <p class="ui grey inverted tiny header">${reading.windChill(reading.temperature, reading.windSpeed)} bft</p>
-      <p class="ui grey inverted tiny header">Max: ${station.getMaxWindSpeed(station.readings)}</p>
-      <p class="ui grey inverted tiny header">Min: ${station.getMinWindSpeed(station.readings)}</p>
-      #{if station.pressureTrend() == 1}
-      <p class="ui grey inverted tiny header">
-        <i class="arrow up icon"></i>
-      </p>
-      #{/if}
-      #{if station.pressureTrend() == 2}
-      <p class="ui grey inverted tiny header">
-        <i class="arrow down icon"></i>
-      </p>
-      #{/if}
-    </div>
-    <div class="black column">
-      <h1 class="ui grey inverted small header">Pressure</h1>
-      <i class="globe icon"></i>
-      <p class="ui grey inverted tiny header">${reading.pressure} hpa</p>
-      <p class="ui grey inverted tiny header">Max: ${station.getMaxPressure(station.readings)}</p>
-      <p class="ui grey inverted tiny header">Min: ${station.getMinPressure(station.readings)}</p>
-      #{if station.windTrend() == 1}
-      <p class="ui grey inverted tiny header">
-        <i class="arrow up icon"></i>
-      </p>
-      #{/if}
-      #{if station.windTrend() == 2}
-      <p class="ui grey inverted tiny header">
-        <i class="arrow down icon"></i>
-      </p>
-      #{/if}
-    </div>
-  </div>
-  #{/if}
-  #{/list}
   #{list items:station.readings, as:'reading'}
   <table class="ui fixed table">
     <thead>
@@ -83,6 +15,7 @@
       <th>Temp</th>
       <th>Wind Speed</th>
       <th>Pressure</th>
+      <th> </th>
     </tr>
     </thead>
     <tbody>
@@ -92,6 +25,9 @@
       <td> ${reading.temperature} </td>
       <td> ${reading.windSpeed} </td>
       <td> ${reading.pressure} </td>
+      <td>
+        <a href="/station/${station.id}/deletereading/${reading.id}" class="ui tiny red button"><i class="trash icon"></i></a>
+      </td>
     <tr>
       #{/list}
     </tbody>

@@ -3,15 +3,19 @@
 
 #{menu id:"dashboard"/}
 
+
 <section class="ui stacked segment form">
   #{list items:stations, as:'station'}
   <section class="ui stacked segment form">
     <header class="ui header">
-      ${station.name}
+        #{lastestconditions station:station /}
     </header>
      <a href="/dashboard/indexStation/${station.id}">
        <i class="folder icon"></i>
      </a>
+      <a href="/dashboard/deleteStation/${station.id}">
+          <i class="trash icon"></i>
+      </a>
   </section>
   #{/list}
 

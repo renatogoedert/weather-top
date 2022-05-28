@@ -1,0 +1,56 @@
+#{extends 'main.html' /}
+#{set title:'Account' /}
+
+#{menu id:"account"/}
+
+<section class="ui stacked segment form">
+    #{list items:member, as:'member'}
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> ${member.firstname} </td>
+            <td> ${member.lastname} </td>
+            <td> ${member.email} </td>
+        <tr>
+            <td>
+                <form class="ui stacked segment form" action="/account/changefirstname" method="POST">
+                <div class="one fields">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input placeholder="First Name" type="text" name="firstname">
+                    </div>
+                    <button class="ui blue submit button">Change</button>
+                </form>
+            </td>
+            <td>
+                <form class="ui stacked segment form" action="/account/changelastname" method="POST">
+                <div class="one fields">
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input placeholder="Last Name" type="text" name="lastname">
+                    </div>
+                    <button class="ui blue submit button">Change</button>
+                </form>
+            </td>
+            <td>
+                <form class="ui stacked segment form" action="/account/changepassword" method="POST">
+                <div class="one fields">
+                    <div class="field">
+                        <label>Password</label>
+                        <input placeholder="Password" type="password" name="password">
+                    </div>
+                    <button class="ui blue submit button">Change</button>
+                </form>
+            </td>
+        </tr>
+            #{/list}
+        </tbody>
+    </table>
+</section>

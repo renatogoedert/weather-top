@@ -33,6 +33,17 @@ public class Dashboard extends Controller
     redirect("/dashboard");
   }
 
+  public static void deleteStation (Long id)
+  {
+    Logger.info("Deleting a Station");
+    Member member = Accounts.getLoggedInMember();
+    Station station = Station.findById(id);
+    member.stations.remove(station);
+    member.save();
+    station.delete();
+    redirect ("/dashboard");
+  }
+
   public static void addReading(String name, int code, float temperature, float windSpeed, int pressure, float windDirection){
     Date date = new Date();
     Reading reading = new Reading(code,temperature,windSpeed,pressure,windDirection,date);
@@ -41,6 +52,17 @@ public class Dashboard extends Controller
     station.save();
     Logger.info("Adding Reading");
     redirect("/dashboard");
+  }
+
+  public static void deleteReading (Long id, Long readingid)
+  {
+    Logger.info("Deleting Reading");
+    Station station = Station.findById(id);
+    Reading reading = Reading.findById(readingid);
+    station.readings.remove(reading);
+    station.save();
+    reading.delete();
+    redirect ("/dashboard");
   }
 
 

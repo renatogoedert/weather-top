@@ -8,6 +8,12 @@ GET     /dashboard                              Dashboard.index
 GET     /dashboard/indexStation/{id}            Dashboard.indexStation
 POST    /dashboard/addstation                   Dashboard.addStation
 POST    /dashboard/{name}/addreading            Dashboard.addReading
+GET     /dashboard/deleteStation/{id}           Dashboard.deleteStation
+GET     /station/{id}/deletereading/{readingid}         Dashboard.deleteReading
+GET     /account                                Account.index
+POST     /account/changefirstname                 Account.changeFirstName
+POST     /account/changelastname                 Account.changeLastName
+POST     /account/changepassword                 Account.changePassword
 GET     /about                                  About.index
 GET    /signup                                  Accounts.signup
 GET    /login                                   Accounts.login

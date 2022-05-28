@@ -71,7 +71,7 @@ public class Station extends Model {
     return MinPressure;
   }
 
-  public int temperatureTrend(){
+  public int temperatureTrend(List<Reading> readings){
     if(readings.size() >=3) {
       Reading r1 = readings.get(readings.size() - 1);
       Reading r2 = readings.get(readings.size() - 2);
@@ -91,7 +91,7 @@ public class Station extends Model {
     return 0;
   }
 
-  public int pressureTrend(){
+  public int pressureTrend(List<Reading> readings){
     if(readings.size() >=3) {
       Reading r1 = readings.get(readings.size() - 1);
       Reading r2 = readings.get(readings.size() - 2);
@@ -111,7 +111,7 @@ public class Station extends Model {
     return 0;
   }
 
-  public int windTrend(){
+  public int windTrend(List<Reading> readings){
     if(readings.size() >=3) {
       Reading r1 = readings.get(readings.size() - 1);
       Reading r2 = readings.get(readings.size() - 2);
