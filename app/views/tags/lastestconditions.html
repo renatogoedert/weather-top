@@ -5,66 +5,152 @@
     #{list items:_station.readings, as:'reading'}
     #{if reading_isLast}
     <div class="ui equal width padded grid">
-        <div class="black column">
-            <h1 class="ui grey inverted small header">${_station.name}</h1>
-            <i class="cloud sun icon"></i>
-        </div>
-        <div class="black column">
-            <h1 class="ui grey inverted small header"> Weather</h1>
-            <i class="map marker icon"></i>
-            <p class="ui grey inverted tiny header">${reading.codeToWeather(reading.code)}</p>
-        </div>
-        <div class="black column">
-            <h1 class="ui grey inverted small header">Temp</h1>
-            <i class="temperature low icon"></i>
-            <p class="ui grey inverted tiny header">${reading.temperature} C</p>
-            <p class="ui grey inverted tiny header">${reading.ceToFa(reading.temperature)} F</p>
-            #{if _station.temperatureTrend(_station.readings) == 2}
-            <p class="ui grey inverted tiny header">
-                <i class="arrow up icon"></i>
-            </p>
-            #{/if}
-            #{if _station.temperatureTrend(_station.readings) == 1}
-            <p class="ui grey inverted tiny header">
-                <i class="arrow down icon"></i>
-            </p>
-            #{/if}
-        </div>
-        <div class="black column">
-            <h1 class="ui grey inverted small header">Wind</h1>
-            <i class="wind icon"></i>
-            <p class="ui grey inverted tiny header">${reading.windInBf(reading.windSpeed)} bft</p>
-            <p class="ui grey inverted tiny header">${reading.windDirectionString(reading.windSpeed)} bft</p>
-            <p class="ui grey inverted tiny header">${reading.windChill(reading.temperature, reading.windSpeed)} bft</p>
-            <p class="ui grey inverted tiny header">Max: ${_station.getMaxWindSpeed(_station.readings)}</p>
-            <p class="ui grey inverted tiny header">Min: ${_station.getMinWindSpeed(_station.readings)}</p>
-            #{if _station.windTrend(_station.readings) == 2}
-            <p class="ui grey inverted tiny header">
-                <i class="arrow up icon"></i>
-            </p>
-            #{/if}
-            #{if _station.windTrend(_station.readings) == 1}
-            <p class="ui grey inverted tiny header">
-                <i class="arrow down icon"></i>
-            </p>
-            #{/if}
-        </div>
-        <div class="black column">
-            <h1 class="ui grey inverted small header">Pressure</h1>
-            <i class="globe icon"></i>
-            <p class="ui grey inverted tiny header">${reading.pressure} hpa</p>
-            <p class="ui grey inverted tiny header">Max: ${_station.getMaxPressure(_station.readings)}</p>
-            <p class="ui grey inverted tiny header">Min: ${_station.getMinPressure(_station.readings)}</p>
-            #{if _station.pressureTrend(_station.readings) == 2}
-            <p class="ui grey inverted tiny header">
-                <i class="arrow up icon"></i>
-            </p>
-            #{/if}
-            #{if _station.pressureTrend(_station.readings) == 1}
-            <p class="ui grey inverted tiny header">
-                <i class="arrow down icon"></i>
-            </p>
-            #{/if}
+        <div class="stretched row">
+            <div class="column">
+                <div class="ui inverted segment">
+                    <div class="ui segments">
+                        <div class="ui horizontal segments">
+                            <div class="ui inverted segment">
+                                <h1 class="ui grey small header">${_station.name}</h1>
+                            </div>
+                            <div class="ui inverted segment">
+                                <i class="purple big map marker icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui inverted segment">
+                            <p>Lat: ${_station.latitude}</p>
+                            <p>Lng: ${_station.longitude}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui inverted segment">
+                    <div class="ui segments">
+                        <div class="ui horizontal segments">
+                            <div class="ui inverted segment">
+                                <h1 class="ui grey small header"> Weather</h1>
+                            </div>
+                            <div class="ui inverted segment">
+                                <i class="yellow big cloud sun icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui inverted segment">
+                            <p>${reading.codeToWeather(reading.code)}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui inverted segment">
+                    <div class="ui segments">
+                        <div class="ui horizontal segments">
+                            <div class="ui inverted segment">
+                                <h1 class="ui grey small header">Temp</h1>
+                            </div>
+                            <div class="ui inverted segment">
+                                <i class="brown big temperature low icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui horizontal segments">
+                            <div class="ui inverted segment">
+                                <p>${reading.temperature} °C</p>
+                                <p>${reading.ceToFa(reading.temperature)} °F</p>
+                            </div>
+                            <div class="ui inverted segment">
+                                #{if _station.temperatureTrend(_station.readings) == 2}
+                                <i class="big red arrow up icon"></i>
+                                #{/if}
+                                #{if _station.temperatureTrend(_station.readings) == 1}
+                                <i class="big blue arrow down icon"></i>
+                                #{/if}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui inverted segment">
+                    <div class="ui segments">
+                        <div class="ui horizontal segments">
+                            <div class="ui inverted segment">
+                                <h1 class="ui  inverted small header">Wind </h1>
+                            </div>
+                            <div class="ui inverted segment">
+                                <i class="green big wind icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui horizontal segments">
+                            <div class="ui fitted inverted segment">
+                                <div class="ui small list">
+                                <div class="item">${reading.windInBf(reading.windSpeed)} bft</div>
+                                <div class="item">
+                                    ${reading.windDirectionString(reading.windSpeed)}
+                                    bft</div>
+                                <div class="item">${reading.windChill(reading.temperature,
+                                    reading.windSpeed)}
+                                    bft</div>
+                                <div class="item">Max:
+                                    ${_station.getMaxWindSpeed(_station.readings)}</div>
+                                <div class="item">Min:
+                                    ${_station.getMinWindSpeed(_station.readings)}</div>
+                                </div>
+                            </div>
+                            <div class="ui inverted segment">
+                                #{if _station.windTrend(_station.readings) == 2}
+                                <p>
+                                    <i class="big red arrow up icon"></i>
+                                </p>
+                                #{/if}
+                                #{if _station.windTrend(_station.readings) == 1}
+                                <p class="ui grey inverted tiny header">
+                                    <i class="big blue arrow down icon"></i>
+                                </p>
+                                #{/if}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui inverted segment">
+                    <div class="ui segments">
+                        <div class="ui horizontal segments">
+                            <div class="ui inverted segment">
+                                <h1 class="ui inverted small header">Pressure </h1>
+                            </div>
+                            <div class="ui inverted segment">
+                                <i class="orange big globe icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui horizontal segments">
+                            <div class="ui fitted inverted segment">
+                                <p>${reading.pressure} hpa</p>
+                                <p>Max:
+                                    ${_station.getMaxPressure(_station.readings)}</p>
+                                <p>Min:
+                                    ${_station.getMinPressure(_station.readings)}</p>
+                            </div>
+                            <div class="ui inverted segment">
+                                #{if _station.pressureTrend(_station.readings) == 2}
+                                <p>
+                                    <i class="big red arrow up icon"></i>
+                                </p>
+                                #{/if}
+                                #{if _station.pressureTrend(_station.readings) == 1}
+                                <p>
+                                    <i class="big blue arrow down icon"></i>
+                                </p>
+                                #{/if}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     #{/if}
