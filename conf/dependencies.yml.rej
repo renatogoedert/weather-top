@@ -1,0 +1,7 @@
+diff a/conf/dependencies.yml b/conf/dependencies.yml	(rejected hunks)
+@@ -1,4 +1,4 @@
+ # Application dependencies
+ 
+ require:
+-    - play 1.5.3
++    - play

@@ -1,0 +1,12 @@
+diff a/conf/application.conf b/conf/application.conf	(rejected hunks)
+@@ -84,9 +84,7 @@
+ #   - mem : for a transient in memory database (H2 in memory)
+ #   - fs  : for a simple file written database (H2 file stored)
+ 
+-db=postgres://glawtppl:ziVpRb3HSQDypG6aPno7XvFF2IDXwJKl@tyke.db.elephantsql.com/glawtppl
+-jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+-jpa.ddl=update
++db.default=mem
+ 
+ #
+ # To connect to a local MySQL5 database, use:
