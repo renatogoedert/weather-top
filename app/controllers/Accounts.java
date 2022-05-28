@@ -42,7 +42,7 @@ public class Accounts extends Controller
     public static void logout()
     {
         session.clear();
-        redirect ("/");
+        redirect ("/login");
     }
 
     public static Member getLoggedInMember()

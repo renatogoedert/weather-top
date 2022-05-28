@@ -26,10 +26,14 @@ public class Dashboard extends Controller
 
   public static void addStation(String name, float latitude,float longitude){
     Member member = Accounts.getLoggedInMember();
-    Station station = new Station(name,latitude,longitude);
-    member.stations.add(station);
-    member.save();
-    Logger.info("Adding Station" + name);
+    if(name.length()>0) {
+      Station station = new Station(name,latitude,longitude);
+      member.stations.add(station);
+      member.save();
+      Logger.info("Adding Station" + name);
+    } else{
+      Logger.info("Station need a name");
+    }
     redirect("/dashboard");
   }
 
@@ -51,7 +55,7 @@ public class Dashboard extends Controller
     station.readings.add(reading);
     station.save();
     Logger.info("Adding Reading");
-    redirect("/dashboard");
+    indexStation(station.id);
   }
 
   public static void deleteReading (Long id, Long readingid)
@@ -62,7 +66,7 @@ public class Dashboard extends Controller
     station.readings.remove(reading);
     station.save();
     reading.delete();
-    redirect ("/dashboard");
+    indexStation(station.id);
   }
 
 
