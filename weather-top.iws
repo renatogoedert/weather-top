@@ -7,64 +7,8 @@
     <list default="true" id="60dcf896-d4cc-48dd-b886-a51ab24b95f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Template_1000$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1000$_run_closure1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template_1000.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1000.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1001$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1001$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1001.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1001.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1002$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1002$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1002.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1002.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1003$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1003$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1003.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1003.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1005$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1005$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1005.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1005.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1006$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1006$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1006.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1006.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1007$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1007$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1008$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1008$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1008.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1008.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1009$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1009$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1009.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1009.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Accounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Reading.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Reading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/errors/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/errors/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/stationdashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stationdashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tags/lastestconditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/lastestconditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/mainpanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/mainpanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/welcomemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/welcomemenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/dependencies.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Application.test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/Application.test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_start.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_stationdashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_stationdashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_welcomemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_welcomemenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Account" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Account" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Accounts" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Accounts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Dashboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Start" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Start" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Member" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Member" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Reading" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Reading" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Station" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Station" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/Bootstrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/Bootstrap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather-top.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-top.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +65,7 @@
       <workItem from="1653815937385" duration="910000" />
       <workItem from="1653823249565" duration="599000" />
       <workItem from="1653832259061" duration="772000" />
+      <workItem from="1653834092062" duration="1535000" />
     </task>
     <servers />
   </component>
