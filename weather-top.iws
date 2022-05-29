@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60dcf896-d4cc-48dd-b886-a51ab24b95f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Template_1000$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1000$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1000.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1000.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tags/lastestconditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/lastestconditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-top.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +62,7 @@
       <workItem from="1653815937385" duration="910000" />
       <workItem from="1653823249565" duration="599000" />
       <workItem from="1653832259061" duration="772000" />
-      <workItem from="1653834092062" duration="1535000" />
+      <workItem from="1653834092062" duration="2907000" />
     </task>
     <servers />
   </component>

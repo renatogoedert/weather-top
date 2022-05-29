@@ -88,17 +88,17 @@
                                 <div class="ui small list">
                                     <div class="item">${reading.windInBf(reading.windSpeed)} bft</div>
                                     <div class="item">
-                                        ${reading.windDirectionString(reading.windSpeed)}
+                                        ${reading.windDirectionString(reading.windDirection)}
                                     </div>
                                     <div class="item">feels like ${reading.windChill(reading.temperature,
                                         reading.windSpeed)}
 
                                     </div>
                                     <div class="item">Max:
-                                        ${_station.getMaxWindSpeed(_station.readings)}
+                                        ${_station.getMaxWindSpeed(_station.readings)} bft
                                     </div>
                                     <div class="item">Min:
-                                        ${_station.getMinWindSpeed(_station.readings)}
+                                        ${_station.getMinWindSpeed(_station.readings)} bft
                                     </div>
                                 </div>
                             </div>
@@ -134,9 +134,9 @@
                             <div class="ui fitted inverted segment">
                                 <p>${reading.pressure} hpa</p>
                                 <p>Max:
-                                    ${_station.getMaxPressure(_station.readings)}</p>
+                                    ${_station.getMaxPressure(_station.readings)} hpa</p>
                                 <p>Min:
-                                    ${_station.getMinPressure(_station.readings)}</p>
+                                    ${_station.getMinPressure(_station.readings)} hpa</p>
                             </div>
                             <div class="ui inverted segment">
                                 #{if _station.pressureTrend(_station.readings) == 2}
