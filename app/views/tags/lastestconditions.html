@@ -86,17 +86,21 @@
                         <div class="ui horizontal segments">
                             <div class="ui fitted inverted segment">
                                 <div class="ui small list">
-                                <div class="item">${reading.windInBf(reading.windSpeed)} bft</div>
-                                <div class="item">
-                                    ${reading.windDirectionString(reading.windSpeed)}
-                                    bft</div>
-                                <div class="item">${reading.windChill(reading.temperature,
-                                    reading.windSpeed)}
-                                    bft</div>
-                                <div class="item">Max:
-                                    ${_station.getMaxWindSpeed(_station.readings)}</div>
-                                <div class="item">Min:
-                                    ${_station.getMinWindSpeed(_station.readings)}</div>
+                                    <div class="item">${reading.windInBf(reading.windSpeed)} bft</div>
+                                    <div class="item">
+                                        ${reading.windDirectionString(reading.windSpeed)}
+                                        bft
+                                    </div>
+                                    <div class="item">${reading.windChill(reading.temperature,
+                                        reading.windSpeed)}
+                                        bft
+                                    </div>
+                                    <div class="item">Max:
+                                        ${_station.getMaxWindSpeed(_station.readings)}
+                                    </div>
+                                    <div class="item">Min:
+                                        ${_station.getMinWindSpeed(_station.readings)}
+                                    </div>
                                 </div>
                             </div>
                             <div class="ui inverted segment">

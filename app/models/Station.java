@@ -24,55 +24,57 @@ public class Station extends Model {
     this.longitude = longitude;
   }
 
-  public Reading getLastReading(){
+  public Reading getLastReading() {
     Reading last = readings.get(readings.size() - 1);
     return last;
   }
 
-  public static Station findByName(String name)
-  {
+  public static Station findByName(String name) {
     return find("name", name).first();
   }
 
-  public float getMaxWindSpeed(List<Reading> readings){
+  public float getMaxWindSpeed(List<Reading> readings) {
     float maxWindSpeed = 0;
-    for(Reading reading:readings){
-      if(reading.windSpeed>maxWindSpeed) {
+    for (Reading reading : readings) {
+      if (reading.windSpeed > maxWindSpeed) {
         maxWindSpeed = reading.windSpeed;
       }
     }
     return maxWindSpeed;
   }
-  public float getMinWindSpeed(List<Reading> readings){
+
+  public float getMinWindSpeed(List<Reading> readings) {
     float minWindSpeed = 10000;
-    for(Reading reading:readings){
-      if(reading.windSpeed<minWindSpeed) {
+    for (Reading reading : readings) {
+      if (reading.windSpeed < minWindSpeed) {
         minWindSpeed = reading.windSpeed;
       }
     }
     return minWindSpeed;
   }
-  public float getMaxPressure(List<Reading> readings){
+
+  public float getMaxPressure(List<Reading> readings) {
     float MaxPressure = 0;
-    for(Reading reading:readings){
-      if(reading.pressure>MaxPressure) {
+    for (Reading reading : readings) {
+      if (reading.pressure > MaxPressure) {
         MaxPressure = reading.pressure;
       }
     }
     return MaxPressure;
   }
-  public float getMinPressure(List<Reading> readings){
+
+  public float getMinPressure(List<Reading> readings) {
     float MinPressure = 10000;
-    for(Reading reading:readings){
-      if(reading.pressure<MinPressure) {
+    for (Reading reading : readings) {
+      if (reading.pressure < MinPressure) {
         MinPressure = reading.pressure;
       }
     }
     return MinPressure;
   }
 
-  public int temperatureTrend(List<Reading> readings){
-    if(readings.size() >=3) {
+  public int temperatureTrend(List<Reading> readings) {
+    if (readings.size() >= 3) {
       Reading r1 = readings.get(readings.size() - 1);
       Reading r2 = readings.get(readings.size() - 2);
       Reading r3 = readings.get(readings.size() - 3);
@@ -81,18 +83,18 @@ public class Station extends Model {
       float t2 = r2.getTemperature();
       float t3 = r3.getTemperature();
 
-      if(t1<t2 && t2<t3){
+      if (t1 < t2 && t2 < t3) {
         return 1;
       }
-      if(t1>t2 && t2>t3){
+      if (t1 > t2 && t2 > t3) {
         return 2;
       }
     }
     return 0;
   }
 
-  public int pressureTrend(List<Reading> readings){
-    if(readings.size() >=3) {
+  public int pressureTrend(List<Reading> readings) {
+    if (readings.size() >= 3) {
       Reading r1 = readings.get(readings.size() - 1);
       Reading r2 = readings.get(readings.size() - 2);
       Reading r3 = readings.get(readings.size() - 3);
@@ -101,18 +103,18 @@ public class Station extends Model {
       int p2 = r2.getPressure();
       int p3 = r3.getPressure();
 
-      if(p1<p2 && p2<p3){
+      if (p1 < p2 && p2 < p3) {
         return 1;
       }
-      if(p1>p2 && p2>p3){
+      if (p1 > p2 && p2 > p3) {
         return 2;
       }
     }
     return 0;
   }
 
-  public int windTrend(List<Reading> readings){
-    if(readings.size() >=3) {
+  public int windTrend(List<Reading> readings) {
+    if (readings.size() >= 3) {
       Reading r1 = readings.get(readings.size() - 1);
       Reading r2 = readings.get(readings.size() - 2);
       Reading r3 = readings.get(readings.size() - 3);
@@ -121,10 +123,10 @@ public class Station extends Model {
       float w2 = r2.getWindSpeed();
       float w3 = r3.getWindSpeed();
 
-      if(w1<w2 && w2<w3){
+      if (w1 < w2 && w2 < w3) {
         return 1;
       }
-      if(w1>w2 && w2>w3){
+      if (w1 > w2 && w2 > w3) {
         return 2;
       }
     }

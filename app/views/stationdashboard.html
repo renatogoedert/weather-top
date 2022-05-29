@@ -6,57 +6,58 @@
 #{lastestconditions station:station /}
 
 <section class="ui stacked segment form">
-  #{list items:station.readings, as:'reading'}
-  <table class="ui fixed table">
-    <thead>
-    <tr>
-      <th>Date</th>
-      <th>Code</th>
-      <th>Temp</th>
-      <th>Wind Speed</th>
-      <th>Pressure</th>
-      <th> </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td> ${reading.date} </td>
-      <td> ${reading.code} </td>
-      <td> ${reading.temperature} </td>
-      <td> ${reading.windSpeed} </td>
-      <td> ${reading.pressure} </td>
-      <td>
-        <a href="/station/${station.id}/deletereading/${reading.id}" class="ui tiny red button"><i class="trash icon"></i></a>
-      </td>
-    <tr>
-      #{/list}
-    </tbody>
-  </table>
+    #{list items:station.readings, as:'reading'}
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Code</th>
+            <th>Temp</th>
+            <th>Wind Speed</th>
+            <th>Pressure</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> ${reading.date}</td>
+            <td> ${reading.code}</td>
+            <td> ${reading.temperature}</td>
+            <td> ${reading.windSpeed}</td>
+            <td> ${reading.pressure}</td>
+            <td>
+                <a href="/station/${station.id}/deletereading/${reading.id}" class="ui tiny red button"><i
+                        class="trash icon"></i></a>
+            </td>
+        <tr>
+            #{/list}
+        </tbody>
+    </table>
 
-  <form class="ui stacked segment form" action="/dashboard/${station.name}/addreading" method="POST">
-    <h1 class="ui small header">Add Reading</h1>
-    <div class="five fields">
-      <div class="field">
-        <label>Code</label>
-        <input placeholder="Code" type="text" name="code">
-      </div>
-      <div class="field">
-        <label>Temperature</label>
-        <input placeholder="00.0 C" type="text" name="temperature">
-      </div>
-      <div class="field">
-        <label>Wind Speed</label>
-        <input placeholder="00.00 Km/h" type="text" name="windSpeed">
-      </div>
-      <div class="field">
-        <label>Pressure</label>
-        <input placeholder="000hPa" type="text" name="pressure">
-      </div>
-      <div class="field">
-        <label>Wind Direction</label>
-        <input placeholder="000deg" type="text" name="windDirection">
-      </div>
-    </div>
-    <button class="ui blue submit button">Add Reading</button>
-  </form>
+    <form class="ui stacked segment form" action="/dashboard/${station.name}/addreading" method="POST">
+        <h1 class="ui small header">Add Reading</h1>
+        <div class="five fields">
+            <div class="field">
+                <label>Code</label>
+                <input placeholder="Code" type="text" name="code">
+            </div>
+            <div class="field">
+                <label>Temperature</label>
+                <input placeholder="00.0 C" type="text" name="temperature">
+            </div>
+            <div class="field">
+                <label>Wind Speed</label>
+                <input placeholder="00.00 Km/h" type="text" name="windSpeed">
+            </div>
+            <div class="field">
+                <label>Pressure</label>
+                <input placeholder="000hPa" type="text" name="pressure">
+            </div>
+            <div class="field">
+                <label>Wind Direction</label>
+                <input placeholder="000deg" type="text" name="windDirection">
+            </div>
+        </div>
+        <button class="ui blue submit button">Add Reading</button>
+    </form>
 </section>

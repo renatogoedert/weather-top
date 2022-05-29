@@ -5,35 +5,35 @@
 
 
 <section class="ui stacked segment form">
-  #{list items:stations, as:'station'}
-  <section class="ui stacked segment form">
-    <header class="ui header">
-        #{lastestconditions station:station /}
-    </header>
-     <a href="/dashboard/indexStation/${station.id}">
-       <i class="folder icon"></i>
-     </a>
-      <a href="/dashboard/deleteStation/${station.id}">
-          <i class="trash icon"></i>
-      </a>
-  </section>
-  #{/list}
+    #{list items:stations, as:'station'}
+    <section class="ui stacked segment form">
+        <header class="ui header">
+            #{lastestconditions station:station /}
+        </header>
+        <a href="/dashboard/indexStation/${station.id}">
+            <i class="folder icon"></i>
+        </a>
+        <a href="/dashboard/deleteStation/${station.id}">
+            <i class="trash icon"></i>
+        </a>
+    </section>
+    #{/list}
 
-  <form class="ui stacked segment form" action="/dashboard/addstation" method="POST">
-   <div class="three fields">
-     <div class="field">
-      <label>Name</label>
-      <input placeholder="Name" type="text" name="name">
-    </div>
-    <div class="field">
-     <label>Latitude</label>
-     <input placeholder="Latitude" type="text" name="latitude">
-   </div>
-   <div class="field">
-     <label>Longitude</label>
-     <input placeholder="Longitude" type="text" name="longitude">
-   </div>
-    <button class="ui blue submit button">Add Station</button>
-  </form>
+    <form class="ui stacked segment form" action="/dashboard/addstation" method="POST">
+        <div class="three fields">
+            <div class="field">
+                <label>Name</label>
+                <input placeholder="Name" type="text" name="name">
+            </div>
+            <div class="field">
+                <label>Latitude</label>
+                <input placeholder="Latitude" type="text" name="latitude">
+            </div>
+            <div class="field">
+                <label>Longitude</label>
+                <input placeholder="Longitude" type="text" name="longitude">
+            </div>
+            <button class="ui blue submit button">Add Station</button>
+    </form>
 
 </section>
